@@ -750,7 +750,7 @@
       <a href="https://www.a-cx.com" target="_blank">Company: a-cx.com</a>
     </div>
   </div>
-  <form class="contact-form" onsubmit="handleSubmit(event)">
+  <form class="contact-form" action="https://formspree.io/f/mdargwaa" method="POST">
     <div class="form-row">
       <div class="form-group">
         <label for="name">Your Name</label>
@@ -803,20 +803,7 @@
     nav.classList.toggle('scrolled', window.scrollY > 60);
   });
 
-  // Form submit handler
-  function handleSubmit(e) {
-    e.preventDefault();
-    const btn = e.target.querySelector('.form-submit');
-    btn.textContent = 'Message Sent';
-    btn.style.background = '#4a7c59';
-    btn.style.color = '#fff';
-    setTimeout(() => {
-      btn.textContent = 'Send Inquiry';
-      btn.style.background = '';
-      btn.style.color = '';
-      e.target.reset();
-    }, 3000);
-  }
+
 
   // Intersection observer for scroll animations
   const observer = new IntersectionObserver((entries) => {
